@@ -1,6 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tool="http://schemas.android.com/tools"
+    android:id="@+id/home_card_view"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/medium_8"
+    android:layout_marginEnd="@dimen/medium_8"
+    android:layout_marginBottom="@dimen/medium_8"
+    app:cardBackgroundColor="@color/light_green"
+    app:cardCornerRadius="@dimen/corner_radius">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/textview_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/medium_16"
+            android:layout_marginBottom="@dimen/little"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constrainTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            tool:text="@string/test_time"/>
+
+        <TextView
+            android:id="@+id/textview_pressure"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/HeaderTextView"
+            app:layout_constraintStart_toEndOf="@id/textview_time"
+            app:layout_constrainTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/image_heart"
+            tool:text="@string/test_pressure"/>
+
+        <ImageView
+            android:id="@+id/image_heart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_favorite_16"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/textview_pressure"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textview_pulse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/HeaderTextViewGray"
+            android:layout_marginEnd="@dimen/medium_16"
+            app:layout_constraintStart_toEndOf="@id/image_heart"
+            app:layout_constrainTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginStart="@dimen/medium_16"
+            tool:text="@string/test_pulse"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>

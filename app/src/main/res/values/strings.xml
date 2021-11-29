@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">PulseApp</string>
     <string name="header">Enter our pulse</string>
+    <string name="test_time">23:54</string>
+    <string name="test_pressure">137 / 71</string>
+    <string name="test_pulse">60</string>
+    <string name="test_date">29.11.2021</string>
 </resources>
