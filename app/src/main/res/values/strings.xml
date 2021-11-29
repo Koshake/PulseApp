@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">PulseApp</string>
+    <string name="header">Enter our pulse</string>
 </resources>
