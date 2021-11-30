@@ -1,7 +1,5 @@
 package com.koshake1.pulseapp.db
 
-import android.util.Log
-import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 import com.koshake1.pulseapp.model.data.Note
 import kotlinx.coroutines.flow.Flow
@@ -13,7 +11,6 @@ const val TAG = "FireStoreDatabase"
 
 class FireBaseProvider (
     private val db: FirebaseFirestore,
-    private val firebaseAuth: FirebaseAuth
 ) : DatabaseProvider {
 
     private val result = MutableStateFlow<List<Note>?>(null)

@@ -20,7 +20,7 @@
             android:layout_marginStart="@dimen/medium_16"
             android:layout_marginBottom="@dimen/little"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constrainTop_toTopOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
             tool:text="@string/test_date"/>
 

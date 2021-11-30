@@ -1,15 +1,10 @@
 package com.koshake1.pulseapp.model.repository
 
 import com.koshake1.pulseapp.model.data.Note
-import com.koshake1.pulseapp.model.data.User
 import kotlinx.coroutines.flow.Flow
 import java.util.*
 
 class NotesRepositoryImpl : NotesRepository {
-    override suspend fun getCurrentUser(): User? {
-        TODO("Not yet implemented")
-    }
-
     override fun observeNotes(): Flow<List<Note>> {
         TODO("Not yet implemented")
     }

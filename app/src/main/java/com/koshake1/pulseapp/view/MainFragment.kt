@@ -44,14 +44,14 @@ class MainFragment : Fragment(R.layout.fragment_main) {
 
         binding.mainRecycler.adapter = adapter
 
-        viewModel.observeViewState().observe(viewLifecycleOwner) {
-            when (it) {
-                is DataViewState.Value -> {
-                    adapter.submitList(it.notes)
-                }
-                DataViewState.EMPTY -> Unit
-            }
-        }
+        //viewModel.observeViewState().observe(viewLifecycleOwner) {
+        //    when (it) {
+        //        is DataViewState.Value -> {
+        //            adapter.submitList(it.notes)
+        //        }
+        //        DataViewState.EMPTY -> Unit
+        //    }
+        //}
 
         binding.fab.setOnClickListener {
             navigateToCreation()

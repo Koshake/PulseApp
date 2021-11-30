@@ -14,7 +14,7 @@ import org.koin.dsl.module
 val repositoryModule = module {
     single<NotesRepository> { NotesRepositoryImpl() }
     single { FirebaseFirestore.getInstance() }
-    single<DatabaseProvider> { FireBaseProvider(get(), get()) }
+    single<DatabaseProvider> { FireBaseProvider(get()) }
 }
 
 val viewModelModule = module {

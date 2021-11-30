@@ -1,7 +1,7 @@
 package com.koshake1.pulseapp.model.data
 
 import android.os.Parcelable
-import kotlinx.android.parcel.Parcelize
+import kotlinx.parcelize.Parcelize
 import kotlin.random.Random
 
 private val idRandom = Random(0)
