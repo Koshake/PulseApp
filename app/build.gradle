@@ -1,6 +1,7 @@
 plugins {
     id 'com.android.application'
     id 'kotlin-android'
+    id 'kotlin-parcelize'
     id 'com.google.gms.google-services'
 }
 
@@ -29,6 +30,9 @@ android {
     }
     kotlinOptions {
         jvmTarget = '1.8'
+    }
+    buildFeatures {
+        viewBinding true
     }
 }
 
@@ -59,4 +63,5 @@ dependencies {
     implementation 'com.google.firebase:firebase-core:20.0.0'
 
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.5.2"
+
 }
