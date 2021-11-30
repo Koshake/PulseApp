@@ -12,7 +12,7 @@ import org.koin.android.viewmodel.dsl.viewModel
 import org.koin.dsl.module
 
 val repositoryModule = module {
-    single<NotesRepository> { NotesRepositoryImpl() }
+    single<NotesRepository> { NotesRepositoryImpl(get()) }
     single { FirebaseFirestore.getInstance() }
     single<DatabaseProvider> { FireBaseProvider(get()) }
 }
