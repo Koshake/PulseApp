@@ -31,6 +31,6 @@ class NoteViewModel(private val notesRepository: NotesRepository, var note: Note
     }
 
     private fun generateNote(): Note {
-        return Note(date = notesRepository.getDate(), time = notesRepository.getTime())
+        return Note()
     }
 }

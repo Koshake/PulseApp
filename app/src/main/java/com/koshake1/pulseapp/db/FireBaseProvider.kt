@@ -14,7 +14,6 @@ import kotlin.coroutines.resumeWithException
 import kotlin.coroutines.suspendCoroutine
 
 private const val NOTES_COLLECTION = "notes"
-private const val USERS_COLLECTION = "users"
 const val TAG = "FireStoreDatabase"
 
 class FireBaseProvider(

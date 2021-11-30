@@ -1,9 +1,7 @@
 package com.koshake1.pulseapp.view
 
 import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
+import android.view.*
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.widget.addTextChangedListener
@@ -56,6 +54,13 @@ class EditFragment : Fragment(R.layout.fragment_edit) {
 
         setHasOptionsMenu(true)
 
+        (requireActivity() as MainActivity).setSupportActionBar(binding.toolbar)
+
+        (requireActivity() as MainActivity).supportActionBar?.apply {
+            setDisplayHomeAsUpEnabled(true)
+            setHomeButtonEnabled(true)
+        }
+
         with(binding) {
             viewModel.note?.let {
                 editPressure.setText(it.pressure)
@@ -75,5 +80,15 @@ class EditFragment : Fragment(R.layout.fragment_edit) {
                 viewModel.saveNote()
             }
         }
+    }
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when (item.itemId) {
+            android.R.id.home -> {
+                view?.clearFocus()
+                activity?.onBackPressed()
+                return true
+            }
+        }
+        return super.onOptionsItemSelected(item)
     }
 }

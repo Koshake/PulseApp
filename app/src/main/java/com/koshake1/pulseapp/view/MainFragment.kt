@@ -44,7 +44,6 @@ class MainFragment : Fragment(R.layout.fragment_main) {
 
         binding.mainRecycler.adapter = adapter
 
-
         viewModel.observeViewState().observe(viewLifecycleOwner) {
             when (it) {
                 is DataViewState.Value -> {
@@ -69,6 +68,6 @@ class MainFragment : Fragment(R.layout.fragment_main) {
     }
 
     private fun navigateToCreation() {
-        (requireActivity() as MainActivity).navigateTo(EditFragment.create(null))
+        (requireActivity() as MainActivity).navigateTo(EditFragment.create())
     }
 }
