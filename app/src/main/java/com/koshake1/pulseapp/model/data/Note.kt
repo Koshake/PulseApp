@@ -10,6 +10,6 @@ data class Note(
     val id : Long = noteId,
     val date : String,
     val time : String,
-    val pressure : String,
-    val pulse : String
+    val pressure : String = "",
+    val pulse : String = ""
 )

@@ -9,4 +9,7 @@ interface NotesRepository {
     fun observeNotes(): Flow<List<Note>>
     suspend fun addOrReplaceNote(newNote: Note)
     suspend fun deleteNote(deletedNote: Note)
+
+    fun getDate() : String
+    fun getTime() : String
 }
