@@ -62,11 +62,9 @@ class FireBaseProvider(
                 Log.e(TAG, "Observe note exception:$e")
             } else if (snapshot != null) {
                 val notes = mutableListOf<Note>()
-
                 for (doc: QueryDocumentSnapshot in snapshot) {
                     notes.add(doc.toObject(Note::class.java))
                 }
-
                 result.value = notes
             }
         }

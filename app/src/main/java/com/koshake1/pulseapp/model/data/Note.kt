@@ -8,6 +8,8 @@ import kotlin.random.Random
 private val idRandom = Random(0)
 val noteId: Long
     get() = idRandom.nextLong()
+val noteTimeId : Long
+    get() = GregorianCalendar().time.time
 
 fun getDate(): String {
     val calendar = GregorianCalendar()
@@ -25,9 +27,10 @@ fun getTime(): String {
 }
 @Parcelize
 data class Note(
-    val id : Long = noteId,
+    val id : Long = noteTimeId,
     val date : String = getDate(),
     val time : String = getTime(),
-    val pressure : String = "",
+    val sys_pressure : String = "",
+    val dias_pressure : String = "",
     val pulse : String = ""
 ) : Parcelable

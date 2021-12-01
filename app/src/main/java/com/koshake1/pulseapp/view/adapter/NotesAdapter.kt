@@ -6,6 +6,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
+import com.koshake1.pulseapp.R
 import com.koshake1.pulseapp.databinding.ItemPulseBinding
 import com.koshake1.pulseapp.model.data.Note
 
@@ -49,7 +50,7 @@ class NotesAdapter(val noteHandler: (Note) -> Unit) :
         fun bind(item: Note) {
             currentNote = item
             with(binding) {
-                textviewPressure.text = item.pressure
+                textviewPressure.text = itemView.context.resources.getString(R.string.pressure, item.sys_pressure, item.dias_pressure)
                 textviewPulse.text = item.pulse
                 textviewTime.text = item.time
                 root.setOnClickListener(clickListener)

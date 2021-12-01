@@ -63,13 +63,18 @@ class EditFragment : Fragment(R.layout.fragment_edit) {
 
         with(binding) {
             viewModel.note?.let {
-                editPressure.setText(it.pressure)
+                editSysPressure.setText(it.sys_pressure)
+                editDiasPressure.setText(it.dias_pressure)
                 editPulse.setText(it.pulse)
             }
 
             (activity as AppCompatActivity?)?.setSupportActionBar(toolbar)
-            editPressure.addTextChangedListener {
-                viewModel.updatePressure(it?.toString() ?: "")
+            editSysPressure.addTextChangedListener {
+                viewModel.updateSysPressure(it?.toString() ?: "")
+            }
+
+            editDiasPressure.addTextChangedListener {
+                viewModel.updateDiasPressure(it?.toString() ?: "")
             }
 
             editPulse.addTextChangedListener {

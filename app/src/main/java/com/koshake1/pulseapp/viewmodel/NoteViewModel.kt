@@ -8,8 +8,13 @@ import kotlinx.coroutines.launch
 
 class NoteViewModel(private val notesRepository: NotesRepository, var note: Note?) : ViewModel() {
 
-    fun updatePressure(text: String) {
-        note = (note ?: generateNote()).copy(pressure = text)
+    fun updateDiasPressure(text: String) {
+        note = (note ?: generateNote()).copy(dias_pressure = text)
+    }
+
+
+    fun updateSysPressure(text: String) {
+        note = (note ?: generateNote()).copy(sys_pressure = text)
     }
 
     fun updatePulse(text: String) {

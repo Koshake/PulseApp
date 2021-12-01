@@ -5,7 +5,10 @@
     <string name="test_pressure">137 / 71</string>
     <string name="test_pulse">60</string>
     <string name="test_date">29.11.2021</string>
-    <string name="pressure">Pressure</string>
+    <string name="systolic_pressure">Systolic Pressure</string>
+    <string name="diastolic_pressure">Diastolic Pressure</string>
     <string name="pulse">Pulse</string>
     <string name="save">Save</string>
+    <string name="divider">/</string>
+    <string name="pressure">%1$s / %2$s</string>
 </resources>
