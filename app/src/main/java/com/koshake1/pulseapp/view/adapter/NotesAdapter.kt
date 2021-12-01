@@ -53,6 +53,7 @@ class NotesAdapter(val noteHandler: (Note) -> Unit) :
                 textviewPressure.text = itemView.context.resources.getString(R.string.pressure, item.sys_pressure, item.dias_pressure)
                 textviewPulse.text = item.pulse
                 textviewTime.text = item.time
+                textviewDate.text = item.date
                 root.setOnClickListener(clickListener)
             }
         }

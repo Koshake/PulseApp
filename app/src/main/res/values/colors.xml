@@ -13,4 +13,6 @@
     <color name="color_white">#F5F5F5</color>
     <color name="colorMyBlue">#2f78ed</color>
     <color name="colorMyLightGray">#96b3e0</color>
+    <color name="purple">#c98edb</color>
+    <color name="myLightBlue">#7FCCCC</color>
 </resources>
