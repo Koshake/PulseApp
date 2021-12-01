@@ -3,11 +3,7 @@ package com.koshake1.pulseapp.model.data
 import android.os.Parcelable
 import kotlinx.parcelize.Parcelize
 import java.util.*
-import kotlin.random.Random
 
-private val idRandom = Random(0)
-val noteId: Long
-    get() = idRandom.nextLong()
 val noteTimeId : Long
     get() = GregorianCalendar().time.time
 
