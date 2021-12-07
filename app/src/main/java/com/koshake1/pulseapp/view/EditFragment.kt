@@ -83,6 +83,7 @@ class EditFragment : Fragment(R.layout.fragment_edit) {
 
             buttonSave.setOnClickListener {
                 viewModel.saveNote()
+                requireActivity().onBackPressed()
             }
         }
     }
